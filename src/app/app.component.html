@@ -1,0 +1,19 @@
+<h4>Reactive Form Using FormGroup  </h4>
+<form [formGroup]= "profileForm" > 
+  <div>First Name:<input type="text" formControlName="fname"></div>
+  <div>Last Name:<input type="text" formControlName="lname"></div>
+  <button (click)="submit()" [disabled]="!profileForm.valid">Submit</button>
+</form>
+<div appHighlightDir>validatong == {{profileForm.status}}</div>
+
+
+<br /><hr /><br/>
+
+
+<h4>Reactive Form Using FormBuilder Service  </h4>
+<form [formGroup]= "profileFormFB" > 
+  <div>First Name:<input type="text" formControlName="fbFName" required></div>
+  <div>Last Name:<input type="text" formControlName="fbLName"></div>
+  <button (click)="submitFB()" [disabled]="!profileFormFB.valid">Submit</button>
+</form>
+<div>validatong == {{profileFormFB.status}}</div>
